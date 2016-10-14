@@ -48,7 +48,7 @@ class ThreatDetails extends Component {
     let feeds = this.makeFeeds(threat.feeds);
 
     return (
-      <Modal bsSize='lg' show={this.props.showModal}>
+      <Modal className="mfga" bsSize='lg' show={this.props.showModal}>
         <Modal.Header style={{background: threat.color, color: 'white'}}>
           <Modal.Title>Threat Details: {threat.target}<a target='_blank' style={{float: 'right', color: 'white'}} href={threat.dive}>Deep Dive</a></Modal.Title>
         </Modal.Header>

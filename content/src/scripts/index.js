@@ -6,6 +6,8 @@ import _ from 'lodash';
 
 import App from './components/app/App';
 
+import bStyle from './css';
+
 window.React = React;
 
 const anchor = document.createElement('div');
@@ -13,11 +15,11 @@ anchor.id = 'mfga-anchor';
 
 document.body.insertBefore(anchor, document.body.childNodes[0]);
 
-const style = document.createElement('link');
-style.rel = 'stylesheet';
-style.type = 'text/css';
-style.href = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css';
-document.head.insertBefore(style, document.head.childNodes[0]);
+//const style = document.createElement('link');
+//style.rel = 'stylesheet';
+//style.type = 'text/css';
+//style.href = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css';
+//document.head.insertBefore(style, document.head.childNodes[0]);
 
 function addStyleString(str) {
   var node = document.createElement('style');
@@ -36,6 +38,7 @@ addStyleString(`
   display: inline;
 }
 
+${bStyle}
 `);
 
 const proxyStore =  new Store({
