@@ -61,6 +61,7 @@ class FeedUtil {
           {data.info}
           {data.object || null}
           {data.refs || null}
+          {data.exposure || null}
         </table>
       </Tab>
       );
