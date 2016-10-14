@@ -6,7 +6,7 @@ superagentPromisePlugin.Promise = Q;
 
 const initialState = 0;
 //const url = 'http://10.9.10.191:5000/api/v1';
-const url = 'http://10.9.10.135:5000/api/v1';
+const url = 'https://10.7.7.45/api/v1';
 
 
 class ThreatService {
