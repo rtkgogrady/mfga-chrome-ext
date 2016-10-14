@@ -5,16 +5,30 @@ const keys = {
   'ASN Country Code': 'whois.asn-country-code'
 };
 
+function renderGeoip(geoip) {
+  let city = geoip['city-name'],
+      country = geoip['country-code'],
+      location = geoip.location;
+  return (
+    <tbody>
+      <tr>
+        <td>City</td>
+        <td>{city}</td>
+      </tr>
+      <tr>
+        <td>Country</td>
+        <td>{country}</td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>{location}</td>
+      </tr>
+    </tbody>);
+}
+
 export default (feed) => {
-  let refs = _.chain(feed)
-              .get('snort.refs')
-    .map((ref, i) => {
-      let url = ref.url.replace(/^https?:\/\//, '');
-      url = `http://${url}`;
-      return (<a key={i} target='_blank' href={url}>{ref.display || 'Ref'}</a>);
-    })
-    .value();
-  refs = (<tbody><tr><td>Refs</td><td>{refs}</td></tr></tbody>);
+  let geoip = renderGeoip(feed.geoip);
+
   let info =
     _.chain(keys)
       .map(keys, (key, title) => {
@@ -30,8 +44,8 @@ export default (feed) => {
     .value();
 
   return {
-    header: 'Emerging Threats',
+    header: 'Alien Vault',
     info: (<tbody>{info}</tbody>),
-    refs: refs
+    geoip: geoip
   };
 };

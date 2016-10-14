@@ -2,6 +2,7 @@ import {Tab} from 'react-bootstrap';
 
 import whois_renderer from './renderers/whois';
 import awn_renderer from './renderers/awn';
+import alien_renderer from './renderers/alienvault';
 import emerging_threats_renderer from './renderers/emerging-threats';
 
 const PUBLISHERS = {
@@ -12,13 +13,7 @@ const PUBLISHERS = {
 };
 
 const renderers = {
-  [PUBLISHERS.ALIENVAULTS]: feed => {
-    let info = null;
-    return {
-      header: 'Alien Vault',
-      info: info
-    };
-  },
+  [PUBLISHERS.ALIENVAULTS]: alien_renderer,
 
   [PUBLISHERS.AWN]: awn_renderer,
 
@@ -62,6 +57,7 @@ class FeedUtil {
           {data.object || null}
           {data.refs || null}
           {data.exposure || null}
+          {data.geoip || null}
         </table>
       </Tab>
       );
