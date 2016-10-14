@@ -14,7 +14,7 @@ function renderExposure(exposure) {
         <td></td>
       </tr>
       <tr>
-        <td>Customers (overlay info)</td>
+        <td>Customers</td>
         <td>{customers}</td>
       </tr>
       <tr>
