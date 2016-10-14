@@ -19,6 +19,25 @@ style.type = 'text/css';
 style.href = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css';
 document.head.insertBefore(style, document.head.childNodes[0]);
 
+function addStyleString(str) {
+  var node = document.createElement('style');
+  node.innerHTML = str;
+  document.body.appendChild(node);
+}
+
+addStyleString(`
+tbody tr td:first-of-type {
+  width: 180px;
+  text-align: right;
+}
+
+tbody tr td:last-of-type {
+  margin-left: 20px;
+  display: inline;
+}
+
+`);
+
 const proxyStore =  new Store({
   state: {},
   portName: 'RSC'
