@@ -7,7 +7,8 @@ const keys = {
 
 export default (feed) => {
   let refs = _.chain(feed)
-              .get('snort.refs')
+    .get('snort.refs', [])
+    .filter(ref => ref.name !== 'md5')
     .map((ref, i) => {
       let url = ref.url.replace(/^https?:\/\//, '');
       url = `http://${url}`;
