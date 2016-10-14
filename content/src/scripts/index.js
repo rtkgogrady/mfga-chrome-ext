@@ -26,12 +26,12 @@ function addStyleString(str) {
 }
 
 addStyleString(`
-tbody tr td:first-of-type {
+.mfga tbody tr td:first-of-type {
   width: 180px;
   text-align: right;
 }
 
-tbody tr td:last-of-type {
+.mfga tbody tr td:last-of-type {
   margin-left: 20px;
   display: inline;
 }
@@ -45,6 +45,6 @@ const proxyStore =  new Store({
 
 render(
   <Provider store={proxyStore}>
-    <App/>
+    <App className='mfga'/>
   </Provider>
   , document.getElementById('mfga-anchor'));
