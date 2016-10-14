@@ -1,12 +1,12 @@
 {
-  "name": "rcr-example",
+  "name": "mfga",
   "version": "0.0.1",
   "private": true,
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tyler Shaddix",
+  "author": "Gerg O'Gerdy",
   "dependencies": {
     "lodash": "^4.16.4",
     "q": "^1.4.1",

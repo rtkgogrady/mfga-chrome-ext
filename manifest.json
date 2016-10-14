@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "RCR",
-  "description": "React, Chrome, and Redux example",
+  "name": "MFGA",
+  "description": "WEEEE Hackathon!",
   "version": "0.0.0.1",
   "background": {
     "scripts": [
@@ -10,7 +10,7 @@
     "persistent": true
   },
   "browser_action": {
-    "default_title": "RCR Example",
+    "default_title": "I don't do anything",
     "default_popup": "popup.html"
   },
   "content_scripts": [
@@ -21,6 +21,7 @@
     }
   ],
   "permissions": [
-    "http://10.9.10.191:5000/"
+    "http://10.9.10.191:5000/",
+    "https://10.9.10.135/"
   ]
 }

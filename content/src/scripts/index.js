@@ -9,7 +9,7 @@ import App from './components/app/App';
 window.React = React;
 
 const anchor = document.createElement('div');
-anchor.id = 'rcr-anchor';
+anchor.id = 'mfga-anchor';
 
 document.body.insertBefore(anchor, document.body.childNodes[0]);
 
@@ -28,4 +28,4 @@ render(
   <Provider store={proxyStore}>
     <App/>
   </Provider>
-  , document.getElementById('rcr-anchor'));
+  , document.getElementById('mfga-anchor'));
