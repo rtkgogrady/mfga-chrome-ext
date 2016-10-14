@@ -49,7 +49,7 @@ class ThreatDetails extends Component {
 
     return (
       <Modal bsSize='lg' show={this.props.showModal}>
-        <Modal.Header>
+        <Modal.Header style={{background: threat.color}}>
           <Modal.Title>Threat Details: {threat.target}<a target='_blank' style={{float: 'right'}} href={threat.dive}>Deep Dive</a></Modal.Title>
         </Modal.Header>
         <Modal.Body>
